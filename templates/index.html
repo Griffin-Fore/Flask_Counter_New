@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Flask</title>
+</head>
+<body>
+    <h1>Counter</h1>
+    <h3>Session Count: {{ session.count }}</h3>
+    <h3>Actual Count: {{ actual_count }}</h3>
+
+    <div>
+        <form style="display: inline-block" action="/add_1" method="POST">
+            <input type="submit" value="Add 1">
+        </form>
+        <a href="/destroy_session">Reset</a>
+    </div>
+
+    <form action="/add_2" method="POST">
+        <input type="submit" value="Add 2">
+    </form>
+
+    <form action="/add_num" method="POST">
+        <label for="num">Increment By:</label>
+        <input type="number" name="num" min="0" max="11">
+        <input type="submit" value="Add num">
+    </form>
+</body>
+</html>
